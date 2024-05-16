@@ -5,13 +5,13 @@ type Props = { movies: MovieDto[] };
 
 export default function MovieGrid({ movies }: Props) {
   return (
-    <ul className="mx-auto flex w-full flex-wrap justify-center gap-2 p-2 ">
+    <ul className="mx-auto flex w-full flex-wrap justify-center gap-2">
       {movies.map((i) => (
         <li
           key={i.id}
           className="group transition hover:z-10 hover:scale-110 hover:shadow-2xl"
         >
-          <article className={`relative w-[200px] overflow-hidden rounded-lg`}>
+          <article className="relative w-[200px] overflow-hidden rounded-lg">
             <div className={styles.poster}>
               <img
                 className="aspect-[2/3] w-full"
