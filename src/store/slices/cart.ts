@@ -7,14 +7,6 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (
-      state,
-      {
-        payload: { movie, days },
-      }: PayloadAction<{ movie: MovieDto; days: number }>,
-    ) => {
-      state[movie.id!] = { ...movie, days };
-    },
     updateCart: (
       state,
       {
@@ -22,7 +14,7 @@ const cartSlice = createSlice({
       }: PayloadAction<{ movie: MovieDto; days: number }>,
     ) => {
       if (days === 0) delete state[movie.id!];
-      else state[movie.id!].days = days;
+      else state[movie.id!] = { ...movie, days };
     },
   },
 });

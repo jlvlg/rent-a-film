@@ -17,11 +17,6 @@ export default function useOnEndOfPage(
         fn();
         console.log("scroll function called");
       }
-      console.log(
-        "element bottom:",
-        element.current?.getBoundingClientRect().bottom,
-      );
-      console.log("window:", window.innerHeight);
     }
 
     window.addEventListener("scroll", onScroll);
