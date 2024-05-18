@@ -36,6 +36,27 @@ function usePaginated(query: string[], params: { [key: string]: string } = {}) {
   };
 }
 
+async function getMovieDetails(movieId: string) {
+  return (await instance.get(`movie/${movieId}`)).data as MovieDto;
+}
+
+function getPosterImage(
+  path: string,
+  size: "w92" | "w154" | "w185" | "w342" | "w500" | "w780" | "original",
+) {
+  return `https://images.tmdb.org/t/p/${size}/${path}`;
+}
+
+function getBackdropImage(
+  path: string,
+  size: "w300" | "w780" | "w1280" | "original",
+) {
+  return `https://images.tmdb.org/t/p/${size}/${path}`;
+}
+
 export default {
   usePaginated,
+  getMovieDetails,
+  getPosterImage,
+  getBackdropImage,
 };
