@@ -86,7 +86,7 @@ export default function MoviePage() {
                 </p>
               </header>
               <p
-                className={`text-slate-300 sm:text-lg md:line-clamp-4 md:w-3/4 ${isPending ? "h-36 w-96 animate-pulse rounded-lg bg-slate-300/10" : ""}`}
+                className={`text-slate-300 sm:text-lg md:line-clamp-4 md:w-3/4 ${isPending ? "h-36 w-full animate-pulse rounded-lg bg-slate-300/10" : ""}`}
               >
                 {isPending ? null : movie.overview}
               </p>
