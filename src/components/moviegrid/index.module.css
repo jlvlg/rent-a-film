@@ -1,5 +1,6 @@
 .poster {
   background: theme(colors.slate.300 / 10%);
+  font-size: 0;
 
   &::after {
     content: "";
