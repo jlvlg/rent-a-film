@@ -1,4 +1,5 @@
 import { useId } from "react";
+import numbersOnly from "../../util/numbersOnly";
 import Button from "../button";
 
 type Props = {
@@ -14,10 +15,9 @@ export default function Counter({
   const counterId = useId();
 
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
-    let value = e.currentTarget.value.replace(/\D/g, "");
-    if (!value.length) value = "0";
+    const value = numbersOnly(e.currentTarget.value, true);
     if (onChangeParent) onChangeParent(value);
-    e.currentTarget.value = Math.abs(parseInt(value)).toString();
+    e.currentTarget.value = value;
   }
 
   function addToCounter(amount: number) {

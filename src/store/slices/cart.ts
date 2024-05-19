@@ -1,20 +1,27 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { MovieDto } from "../../models/movie";
 
-const initialState: { [key: string]: MovieDto & { days: number } } = {};
+const initialState: { [key: string]: { title: string; days: number } } = {};
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    updateCart: (
+    update: (
       state,
       {
-        payload: { movie, days },
-      }: PayloadAction<{ movie: MovieDto; days: number }>,
+        payload: { id, title, days },
+      }: PayloadAction<{ id: number; title: string; days: number }>,
     ) => {
-      if (days === 0) delete state[movie.id!];
-      else state[movie.id!] = { ...movie, days };
+      if (days === 0) delete state[id];
+      else state[id] = { title, days };
+    },
+    remove: (state, { payload: id }: PayloadAction<number>) => {
+      delete state[id];
+    },
+    clear: (state) => {
+      for (const key in state) {
+        delete state[key];
+      }
     },
   },
 });

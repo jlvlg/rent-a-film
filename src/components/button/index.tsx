@@ -15,6 +15,7 @@ type Props = {
 const colors = {
   white: "bg-white hover:bg-slate-100 text-slate-600 active:bg-slate-200",
   red: "bg-red-600 hover:bg-red-700 text-slate-300 active:bg-red-800",
+  green: "bg-green-500 hover:bg-green-600 text-white active:bg-green-700",
 };
 
 export default function Button({
@@ -39,7 +40,7 @@ export default function Button({
       aria-label={aria?.label}
       aria-controls={aria?.controls}
       className={classNames(
-        "flex place-items-center px-4 py-2 transition duration-200",
+        "flex items-center justify-center px-4 py-2 transition duration-200",
         colors[color ?? "white"],
         className,
       )}
