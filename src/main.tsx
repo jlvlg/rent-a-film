@@ -11,26 +11,29 @@ import MoviePage from "./pages/movie/page.tsx";
 import HomePage from "./pages/page.tsx";
 import Store from "./store/index.ts";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />,
-      },
-      {
-        path: "cart",
-        element: <CartPage />,
-      },
-      {
-        path: "movie/:movieId",
-        element: <MoviePage />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: "cart",
+          element: <CartPage />,
+        },
+        {
+          path: "movie/:movieId",
+          element: <MoviePage />,
+        },
+      ],
+    },
+  ],
+  { basename: "/rent-a-film" },
+);
 
 const queryClient = new QueryClient();
 
