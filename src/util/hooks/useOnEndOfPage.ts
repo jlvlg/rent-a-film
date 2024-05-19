@@ -15,7 +15,6 @@ export default function useOnEndOfPage(
         condition
       ) {
         fn();
-        console.log("scroll function called");
       }
     }
 

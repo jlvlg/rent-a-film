@@ -26,7 +26,7 @@ export default function CartPage() {
     <div className="mx-auto mt-16 flex w-11/12 flex-col gap-x-10 gap-y-4 text-slate-200 lg:flex-row">
       <ul className="flex flex-auto flex-col gap-2 overflow-scroll rounded-lg border border-slate-200 p-2">
         {cartItems.map(([key, value]) => (
-          <li className="flex items-center justify-between gap-4 ">
+          <li key={key} className="flex items-center justify-between gap-4 ">
             <span className="truncate">{value.title}</span>
             <div className="flex items-center gap-4">
               DAYS:

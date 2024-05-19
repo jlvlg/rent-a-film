@@ -28,7 +28,6 @@ export default function MoviePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("checking", movieId);
       dispatch(Store.actions.rent.check(parseInt(movieId)));
     }, 300000);
 
@@ -44,7 +43,6 @@ export default function MoviePage() {
     ) {
       days = 0;
     }
-    console.log(movie);
     dispatch(
       Store.actions.cart.update({
         id: movie!.id!,

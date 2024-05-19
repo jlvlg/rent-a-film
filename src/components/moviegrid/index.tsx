@@ -10,8 +10,6 @@ function MovieGridInner(
   { movies }: Props,
   ref: React.ForwardedRef<HTMLUListElement>,
 ) {
-  if (!movies) console.log("no");
-  if (movies) console.log("yes");
   return (
     <ul
       ref={ref}

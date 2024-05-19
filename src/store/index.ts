@@ -8,10 +8,19 @@ import {
   useDispatch as reduxDispatch,
   useSelector as reduxSelector,
 } from "react-redux";
+import { persistReducer, persistStore } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 import { actions, reducer } from "./slices";
 
+const persistConfig = {
+  key: "root",
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, reducer);
+
 const store = configureStore({
-  reducer,
+  reducer: persistedReducer,
 });
 
 const useDispatch = reduxDispatch.withTypes<StoreDispatch>();
@@ -19,6 +28,7 @@ const useSelector = reduxSelector.withTypes<StoreState>();
 
 const Store = {
   store,
+  persistor: persistStore(store),
   useDispatch,
   useSelector,
   actions,

@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
 import "./index.css";
 import CartPage from "./pages/cart/page.tsx";
 import RootLayout from "./pages/layout.tsx";
@@ -37,7 +38,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <Provider store={Store.store}>
-        <RouterProvider router={router} />
+        <PersistGate loading={null} persistor={Store.persistor}>
+          <RouterProvider router={router} />
+        </PersistGate>
       </Provider>
     </QueryClientProvider>
   </React.StrictMode>,
