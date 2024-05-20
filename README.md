@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎞️ Rent-a-Film
 
-Currently, two official plugins are available:
+Bem-vindos à mais nova solução de mídia digital por aluguel!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💿 O nosso catálogo!
 
-## Expanding the ESLint configuration
+* Possuímos todos os filmes existentes (no TheMovieDataBase)!
+* Desfrute de um catlálogo vasto e compreensivo que pode ser visualizado em ordem de popularidade, avaliações e novos lançamentos!
+* Alugue um, seis, vinte filmes de uma só vez! Você não precisa se preocupar se quer assistir O Poderoso Chefão ou Barbie e o Castelo de Diamante, adicione os dois ao carrinho e alugue-os simultâneamente!
+* Website totalmente acessível por desktop e celulares!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🌐 Segue o [link](https://lucaslopes.dev.br/rent-a-film) do site no ar 
 
-- Configure the top-level `parserOptions` property like this:
+## 🧢 Junte-se à equipe, hospede o site em sua máquina
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### ⚙️ Requisitos
+```
+nodejs ^22.1.0
+pnpm ^9.1.1 (ou seu gerenciador de pacotes de preferência)
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### ⬇️ Instalação
+
+* Clone o repositório git em sua máquina.  
+`git clone https://github.com/jlvlg/rent-a-film`
+* Navegue até o local de instalação.  
+`cd rent-a-film`
+* Instale os pacotes necessários.  
+`pnpm install`
+* Transpile o código.  
+`pnpm build`
+* Visualize.  
+`pnpm preview`
