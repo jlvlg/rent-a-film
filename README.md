@@ -28,6 +28,7 @@ pnpm ^9.1.1 (ou seu gerenciador de pacotes de preferência)
 `cd rent-a-film`
 * Instale os pacotes necessários.  
 `pnpm install`
+* Modifique o arquivo .env para incluir a sua API key do [TMDB](https://themoviedb.org). Por simplicidade o arquivo .env atual já inclui uma API key funcional.
 * Transpile o código.  
 `pnpm build`
 * Visualize.  
